@@ -1,21 +1,29 @@
 package th.mfu.boot;
 
 import java.time.LocalDate;
+import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import javax.persistence.GenerationType;
 
-
+@Entity
 public class User {
 
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String username;
     private String email;
     private String displayname;
     private LocalDate birthday;
+
     public String getUsername() {
         return username;
     }
@@ -46,7 +54,4 @@ public class User {
     public void setId(Long id) {
         this.id = id;
     }
-    
-    
-    
 }

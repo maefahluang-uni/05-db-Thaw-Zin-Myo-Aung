@@ -15,7 +15,7 @@ In UserRepository, declare the following methods that help to find all user and 
 - `data.sql` contains insert statements for dummy users. Find where this file is and explain what it is used for? 
 
 ```
-Your answer
+The dummy insert statements for dummy users are used to pre-populate the database with sample datas for development and testing purposes.
 ```
 
 ## User Reservice - Complete the code
